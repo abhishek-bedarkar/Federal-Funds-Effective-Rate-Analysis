@@ -243,6 +243,7 @@
     }
     .reveal .slide:not(.center) {
       height: 100%;
+      overflow-y: auto;
     }
     .reveal .slide.scrollable {
       overflow-y: auto;
@@ -444,10 +445,13 @@ tau1 -2.58 -1.95 -1.62</code></pre>
 <ul>
 <li>The p-value associated with the test statistic is approximately 5.869e-16, which is significantly less than the common significance levels (1%, 5%, and 10%).</li>
 </ul>
+</section>
+<section id="empirical-data-analysis-3" class="slide level2">
+<h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="acf">2.2.1 ACF</h4>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="960" class="r-stretch"></section>
-<section id="empirical-data-analysis-3" class="slide level2">
+<section id="empirical-data-analysis-4" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="acf-analysis">2.2.2 ACF Analysis</h4>
 <ul>
@@ -455,31 +459,31 @@ tau1 -2.58 -1.95 -1.62</code></pre>
 <li>However, the consistently elevated ACF values beyond significance bounds indicate non-stationarity, implying the necessity of differencing the series for achieving stationarity in forecasting models.</li>
 </ul>
 </section>
-<section id="empirical-data-analysis-4" class="slide level2">
+<section id="empirical-data-analysis-5" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="pacf">2.3.1 PACF</h4>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-8-1.png" width="960" class="r-stretch"></section>
-<section id="empirical-data-analysis-5" class="slide level2">
+<section id="empirical-data-analysis-6" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="pacf-analysis">2.3.2 PACF Analysis</h4>
 <ul>
 <li>The PACF plot for the Federal Funds Rate indicates a notable spike at lag 1, suggesting that an AR(1) model—where the current value is notably influenced by its immediate past—is suitable, with minimal influence from values beyond the first lag.</li>
 </ul>
 </section>
-<section id="empirical-data-analysis-6" class="slide level2">
+<section id="empirical-data-analysis-7" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="decomposition">2.4.1. Decomposition</h4>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-10-1.png" width="960" class="r-stretch"></section>
-<section id="empirical-data-analysis-7" class="slide level2">
+<section id="empirical-data-analysis-8" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="decomposition-analysis">2.4.2 Decomposition Analysis</h4>
 <ul>
 <li>The seasonal plot’s regular spikes show a systematic seasonal effect, the trend plot’s smooth line illustrates the long-term trend, and the irregular fluctuations in the remainder component highlight unexplained variance or potential one-off events, giving insights into how the Federal Funds Rate has changed over time.</li>
 </ul>
 </section>
-<section id="empirical-data-analysis-8" class="slide level2">
+<section id="empirical-data-analysis-9" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="correlation">2.5.1 Correlation</h4>
 <div class="cell">
@@ -489,7 +493,7 @@ tau1 -2.58 -1.95 -1.62</code></pre>
 </div>
 
 <img data-src="index_files/figure-revealjs/unnamed-chunk-12-1.png" width="960" class="r-stretch"></section>
-<section id="empirical-data-analysis-9" class="slide level2">
+<section id="empirical-data-analysis-10" class="slide level2">
 <h2><strong>2. Empirical Data Analysis</strong></h2>
 <h4 id="correlation-analysis">2.5.2 Correlation Analysis</h4>
 <ul>

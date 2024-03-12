@@ -3,6 +3,7 @@ title: "Federal Funds Effective Rate Analysis"
 author: "Abhishek Bedarkar & Sanket Gadhave"
 format: revealjs
 editor: visual
+scrollable: true
 ---
 
 ```{r}
@@ -127,12 +128,13 @@ summary(adf_result)
 
 -   The p-value associated with the test statistic is approximately 5.869e-16, which is significantly less than the common significance levels (1%, 5%, and 10%).
 
+## **2. Empirical Data Analysis**
+
 #### 2.2.1 ACF
 
 ```{r}
 # Plot ACF for FFR
 acf(fed_rates$value, lag.max = 20)
-
 ```
 
 ## **2. Empirical Data Analysis**
