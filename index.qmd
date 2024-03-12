@@ -128,7 +128,8 @@ summary(adf_result)
 
 -   The p-value associated with the test statistic is approximately 5.869e-16, which is significantly less than the common significance levels (1%, 5%, and 10%).
 
-## **2. Empirical Data Analysis**
+
+## 2. Empirical Data Analysis
 
 #### 2.2.1 ACF
 
@@ -137,14 +138,14 @@ summary(adf_result)
 acf(fed_rates$value, lag.max = 20)
 ```
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.2.2 ACF Analysis
 
 -   The Federal Funds Rate Autocorrelation Plot reveals a decreasing correlation with increasing time lags, suggesting a gradual influence of past values on future ones.
 -   However, the consistently elevated ACF values beyond significance bounds indicate non-stationarity, implying the necessity of differencing the series for achieving stationarity in forecasting models.
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.3.1 PACF
 
@@ -153,13 +154,13 @@ acf(fed_rates$value, lag.max = 20)
 pacf(fed_rates$value, lag.max = 20)
 ```
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.3.2 PACF Analysis
 
 -   The PACF plot for the Federal Funds Rate indicates a notable spike at lag 1, suggesting that an AR(1) model---where the current value is notably influenced by its immediate past---is suitable, with minimal influence from values beyond the first lag.
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.4.1. Decomposition
 
@@ -172,13 +173,13 @@ decomposed <- stl(fed_rates_ts, s.window = "periodic")
 plot(decomposed)
 ```
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.4.2 Decomposition Analysis
 
 -   The seasonal plot's regular spikes show a systematic seasonal effect, the trend plot's smooth line illustrates the long-term trend, and the irregular fluctuations in the remainder component highlight unexplained variance or potential one-off events, giving insights into how the Federal Funds Rate has changed over time.
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.5.1 Correlation
 
@@ -190,7 +191,7 @@ cor(cleaned_data$value_fed, cleaned_data$value_bond_diff, use = "complete.obs")
 ccf(cleaned_data$value_fed, cleaned_data$value_bond_diff, lag.max = 20, main = "CCF between FFR and Treasury Spread")
 ```
 
-## **2. Empirical Data Analysis**
+## 2. Empirical Data Analysis
 
 #### 2.5.2 Correlation Analysis
 
